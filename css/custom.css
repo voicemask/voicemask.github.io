@@ -61,7 +61,7 @@ a:active {
 				padding: 0.5em 2em 2em 2em;
 				background-color: #FFFFFF;
 
-				max-width: 100%;
+				max-width: 120%;
 				margin: 0 auto !important;
 				float: none !important; ;
 			}
@@ -73,21 +73,21 @@ a:active {
 			}
 			.global_container {
 				text-align: center;
-				width: 100%;
+				width: 120%;
 
 				display: flex;
 				align-items: center;
 				justify-content: center;
 			}
 			.section {
-				width: 900px;
-				max-width: 100%;
+				width: 1200px;
+				max-width: 120%;
 				text-align: center;
 
 			}
 			.language {
-				width: 900px;
-				max-width: 100%;
+				width: 1200px;
+				max-width: 120%;
 				text-align: right;
 
 			}
