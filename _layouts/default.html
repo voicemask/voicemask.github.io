@@ -89,10 +89,10 @@ VoiceMask is able to protect your real-world conversation via real-time over-the
 							</div>
 						<p class="answer">
 							As depicted in above figure, VoiceMask predictive model can forecast adversarial perturbation for upcoming streaming speech.
-							For example, the model captures the input for time 0 to time t, and outputs the perturbation from t+&Delta to t+ &Delta t+ &gamma.
+							For example, the model captures the input for time 0 to time t, and outputs the perturbation from t+Δt to t+ Δt+γ .
 							Then the model will slid forward to the next time window and so on.
 							However, the beginning of the speech is still exposed to threat only with the predictive model.
-							To address this challenge, we design a universal perturbation header for the specific speaker to completely protect our voice against unauthorized speech synthesis attacks.
+							To address this challenge, we design a universal perturbation header for the blank time window from 0 to t+Δt for the the specific speaker to completely protect his or her voice against unauthorized speech synthesis attacks.
 							 <!-- <strong class="bold"> (e.g., command to smart home, Call someone by Siri, Interact with Google Assistants)</strong>, the interpreted commands is changed to the attacker's intention.
 							In our example (right), the transcribed sentences to changed from "close the window and curtains" to "open the door". In this case, our attack is very dangerous to able to alter/control the smart devices without users' perception. -->
 						</p>
