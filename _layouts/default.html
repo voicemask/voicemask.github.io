@@ -75,26 +75,20 @@ VoiceMask could protect your voice in your social network secure without any ext
 				<div class ="boxed">
 					<img src="assets/Fc.PNG" width="500px" height="160px">
 				</div>
-				<p> <b> User Interaction:</b> the adversary
-launches the attack by playing the “read message” adversarial audio
-at stage ① , followed by the successful response from the ASR
-system reading the message containing a personal verification code
-at stage ② . However, when the user is present, he/she is conscious
-of the abnormal behavior of the ASR device and tries to interact
-with the ASR system by sending a halting command (such as “stop
-reading”) at stage ③ to regain the control. Consequently, the ASR
-system follows the user’s benign command and terminates the
-reading process.</p>
+				<p> <b> Real-world Conversation:</b> Real-world human speech is threatened by voice synthesis attackers as well.
+While people are talking, an adversary can record the speech audio and launch the voice synthesis attack.
+Since real-world speech is a streaming audio signal, existing defenses cannot mask our voice efficiently enough to allow the protection of streaming audios.
+VoiceMask is able to protect your real-world conversation via real-time over-the-air perturbation injection.</p>
 
-				<h2>Features of SpecPatch Attack</h2>
+				<h2>VoiceMask System Design</h2>
 				<ul>
 						<li class="question">
-							<b> How does launch the SpecPatch Attack?</b>
+							<b> How to generate real-time perturbation?</b>
 							<div class ="boxed">
 								<img src="assets/demo.png" width="800px" height="300px">
 							</div>
 						<p class="answer">
-							As depicted in above figure (left), the attacker crafts the adversarial spectrogram patch and play it via speaker. While the victim is using the ASR services <strong class="bold"> (e.g., command to smart home, Call someone by Siri, Interact with Google Assistants)</strong>, the interpreted commands is changed to the attacker's intention.
+							As depicted in above figure, the attacker crafts the adversarial spectrogram patch and play it via speaker. While the victim is using the ASR services <strong class="bold"> (e.g., command to smart home, Call someone by Siri, Interact with Google Assistants)</strong>, the interpreted commands is changed to the attacker's intention.
 							In our example (right), the transcribed sentences to changed from "close the window and curtains" to "open the door". In this case, our attack is very dangerous to able to alter/control the smart devices without users' perception.
 						</p>
 					<b>What are the key features of SpecPatch?</b>
