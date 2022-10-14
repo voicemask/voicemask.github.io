@@ -1,0 +1,167 @@
+
+<html>
+	<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XTFM65VS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1XTFM65VS2');
+</script>
+	<meta charset=“UTF-8”>
+
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,bold,900,600">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <!-- Custom styles for this template -->
+ 		 <link href="css/custom.css" rel="stylesheet">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+		<title>SpecPatch</title>
+	</head>
+	<body>
+		<div class = "global_container">
+			<div class = "section"  >
+
+				<h1>VoiceMask: Shielding Your Voice With Real-Time Predictive Perturbation</h1>
+				<div class ="boxed">
+					<p> we propose SpecPatch, a human-in-the loop adversarial audio attack on automated speech recognition (ASR) systems. Existing audio adversarial attacker assumes that the users cannot notice the adversarial audios, and hence allows the successful delivery
+of the crafted adversarial examples or perturbations. However, in a
+practical attack scenario, the users of intelligent voice-controlled
+systems (e.g., smartwatches, smart speakers, smartphones) have
+constant vigilance for suspicious voice, especially when they are
+delivering their voice commands.
+					</p>
+					<br>
+
+					<p style="font-size:20px; text-align: center"><a href="assets/paper.pdf">Read the Paper</a>,
+					<a href="#bibtex" data-toggle="collapse" role="button">
+					Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a>
+				<div id="bibtex" style="margin-top: 1.5em;" class="collapse" align="left">
+					<pre style="white-space: pre">
+@inproceedings{guo2022specpatch,
+  title={SpecPatch: Human-In-The-Loop Adversarial Audio Spectrogram Patch Attack on Speech Recognition},
+  author={Guo, Hanqing and Wang, Yuanda and Ivanov, Nikolay and Yan, Qiben and Xiao, Li},
+  booktitle={Proceedings of the 2022  ACM Conference on Computer and Communications Security (CCS)},
+  year={2022}
+}
+</pre></p></div>
+	</div>
+
+				<h2>Failure Cases of Existing Adversarial Audio Attack</h2>
+				<div class ="boxed">
+					<img src="assets/Fa.PNG" width="500px" height="160px">
+				</div>
+				<p> <b> User Interference:</b> while the adversary and the user
+pronounce commands concurrently (e.g., the AE says, “call 911”,
+and the user speaks, “set an alarm at 6 am” at stage ①), the ASR
+system tends to accept the user’s command rather than the AEs; in
+this case, it will respond with “Alarm has been set”.</p>
+				<div class ="boxed">
+					<img src="assets/Fb.PNG" width="500px" height="160px">
+				</div>
+				<p> <b> User Perception:</b> Although the adversary
+might craft imperceptible AEs by encoding the adversary command
+into songs or different speeches, the user is still able to locate the
+source of skeptical sound because of the long duration and repeated
+appearance of common audio adversarial attacks.</p>
+
+				<div class ="boxed">
+					<img src="assets/Fc.PNG" width="500px" height="160px">
+				</div>
+				<p> <b> User Interaction:</b> the adversary
+launches the attack by playing the “read message” adversarial audio
+at stage ① , followed by the successful response from the ASR
+system reading the message containing a personal verification code
+at stage ② . However, when the user is present, he/she is conscious
+of the abnormal behavior of the ASR device and tries to interact
+with the ASR system by sending a halting command (such as “stop
+reading”) at stage ③ to regain the control. Consequently, the ASR
+system follows the user’s benign command and terminates the
+reading process.</p>
+
+				<h2>Features of SpecPatch Attack</h2>
+				<ul>
+						<li class="question">
+							<b> How does launch the SpecPatch Attack?</b>
+							<div class ="boxed">
+								<img src="assets/demo.png" width="800px" height="300px">
+							</div>
+						<p class="answer">
+							As depicted in above figure (left), the attacker crafts the adversarial spectrogram patch and play it via speaker. While the victim is using the ASR services <strong class="bold"> (e.g., command to smart home, Call someone by Siri, Interact with Google Assistants)</strong>, the interpreted commands is changed to the attacker's intention.
+							In our example (right), the transcribed sentences to changed from "close the window and curtains" to "open the door". In this case, our attack is very dangerous to able to alter/control the smart devices without users' perception.
+						</p>
+					<b>What are the key features of SpecPatch?</b>
+					<p class="answer">
+						<ul>
+								<li class="answer"> <b>Robust:</b> SpecPatch is designed to be robust to the environmental changes, and most importantly, it is robust to any benign commands from the users.</li>
+								<li class="answer">  <b>Imperceptible:</b> SpecPatch is imperceptible because it is very short (<500 Millisecond), and is operated on the human insensitive hearing frequency band</li>
+								<li class="answer">  <b>Deny of Service:</b> SpecPatch has especially designed "mute" patches, which can prevent the users from correcting their commands, causing deny of service attack after deliver the melicious commands.</li>
+						</ul>
+
+					</p>
+				</ul>
+
+					<h2>SpecPatch Sample Audios</h2>
+
+					<div style="margin-top=5em;">
+
+						<table>
+							<tr>
+								<td><h3>Benign</h3> </td>
+								<td><h4>Adversarial </h4></td>
+							</tr>
+							<tr>
+								<td>"Turn on the lights"</td>
+								<td><strong class="bold">[Patch + Mute]:</strong> "<b>Open the door</b>----------------"</td>
+							</tr>
+						<tr>
+							<td><audio controls>
+									<source src="./assets/T_turn.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+							<td><audio controls>
+									<source src="./assets/FS_opendoor.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+						</tr>
+							<tr>
+								<td>"Close the window and curtains"</td>
+								<td><strong class="bold">[Patch]:</strong> "<b>Open the door<b> window and curtains"</td>
+							</tr>
+						<tr>
+							<td><audio controls>
+									<source src="./assets/T_long.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+							<td><audio controls>
+									<source src="./assets/F_opendoor.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+						</tr>
+						<tr>
+							<td>"Turn on the lights"</td>
+							<td><strong class="bold">[Mute]:</strong>"-------------------"</td>
+						</tr>
+					<tr>
+						<td><audio controls>
+								<source src="./assets/T_turn.wav" type="audio/wav">
+								Your browser does not support the <code>audio</code> element.
+							</audio></td>
+						<td><audio controls>
+								<source src="./assets/S_turn.wav" type="audio/wav">
+								Your browser does not support the <code>audio</code> element.
+							</audio></td>
+					</tr>
+
+					</table>
+
+
+
+	</body>
+</html>
