@@ -38,7 +38,7 @@ We evaluate VoiceMask protection performance under different real-world scenario
 					</p>
 					<br>
 
-					<p style="font-size:20px; text-align: center"><a href="assets/paper.pdf">Read the Paper</a>,
+					<!-- <p style="font-size:20px; text-align: center"><a href="assets/paper.pdf">Read the Paper</a>,
 					<a href="#bibtex" data-toggle="collapse" role="button">
 					Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a>
 				<div id="bibtex" style="margin-top: 1.5em;" class="collapse" align="left">
@@ -48,19 +48,20 @@ We evaluate VoiceMask protection performance under different real-world scenario
   author={Guo, Hanqing and Wang, Yuanda and Ivanov, Nikolay and Yan, Qiben and Xiao, Li},
   booktitle={Proceedings of the 2022  ACM Conference on Computer and Communications Security (CCS)},
   year={2022}
-}
+} -->
 </pre></p></div>
 	</div>
 
-				<h2>Failure Cases of Existing Adversarial Audio Attack</h2>
+				<h2>Application Scenarios of VoiceMask Protection</h2>
 				<div class ="boxed">
 					<img src="assets/Fa.PNG" width="500px" height="160px">
 				</div>
-				<p> <b> User Interference:</b> while the adversary and the user
-pronounce commands concurrently (e.g., the AE says, “call 911”,
-and the user speaks, “set an alarm at 6 am” at stage ①), the ASR
-system tends to accept the user’s command rather than the AEs; in
-this case, it will respond with “Alarm has been set”.</p>
+				<p> <b> Real Time Communications Applications:</b> It is common for people to send voice memos or make voice calls using real-time communication apps.
+The attackers may hide in chat groups and record your voice for voice synthesis.
+Meanwhile, many people meet online since the COVID-19 pandemic,
+the attackers can attend public meetings and record the victim's voice without permission.
+However, existing defense methods cannot provide protection for the real-time streaming speech.
+And VoiceMask can provide real-time adversarial perturbation for the real-time streaming speech. </p>
 				<div class ="boxed">
 					<img src="assets/Fb.PNG" width="500px" height="160px">
 				</div>
