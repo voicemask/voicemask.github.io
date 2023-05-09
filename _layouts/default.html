@@ -22,19 +22,19 @@
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
  	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-		<title>VoiceMask</title>
+		<title>VSMask</title>
 	</head>
 	<body>
 		<div class = "global_container">
 			<div class = "section"  >
 
-				<h1>VoiceMask: Shielding Your Voice With Real-Time Predictive Perturbation</h1>
+				<h1>VSMask: Defending Against Voice Synthesis Attack via Real-Time Predictive Perturbation</h1>
 				<div class ="boxed">
 					<p>Voice synthesis attack is threatening the security of everyone's voice. How to prevent the attackers from synthesizing our voices is the key question this research aims to answer.
 						In this paper, we explore the feasibility of real-time protection against voice synthesis.
-By implementing real-time predictive model and universal perturbation header, VoiceMask successfully protects real-time speech signal in both online and offline real-world scenarios.
-Furthermore, VoiceMask mitigates the audio distortion in protected speech via the weight-based amplitude constrained mechanism.
-We evaluate VoiceMask protection performance under different real-world scenarios, and the experiment results show that VoiceMask can effectively defend against voice synthesis attacks in both digital and physical worlds.
+By implementing real-time predictive model and universal perturbation header, VSMask successfully protects real-time speech signal in both online and offline real-world scenarios.
+Furthermore, VSMask mitigates the audio distortion in protected speech via the weight-based amplitude constrained mechanism.
+We evaluate VSMask protection performance under different real-world scenarios, and the experiment results show that VSMask can effectively defend against voice synthesis attacks in both digital and physical worlds.
 					</p>
 					<br>
 				<!-- </div> -->
@@ -52,7 +52,7 @@ We evaluate VoiceMask protection performance under different real-world scenario
 </pre></p></div>
 	</div>
 
-				<h2>Application Scenarios of VoiceMask Protection</h2>
+				<h2>Application Scenarios of VSMask Protection</h2>
 				<div class ="boxed">
 					<img src="assets/P1.png" width="500px" height="125px">
 				</div>
@@ -61,7 +61,7 @@ The attackers may hide in chat groups and record your voice for voice synthesis.
 Meanwhile, many people meet online since the COVID-19 pandemic,
 the attackers can attend public meetings and record the victim's voice without permission.
 However, existing defense methods cannot provide protection for the real-time streaming speech.
-VoiceMask can provide real-time adversarial perturbation for the real-time streaming speech. </p>
+VSMask can provide real-time adversarial perturbation for the real-time streaming speech. </p>
 				<div class ="boxed">
 					<img src="assets/P2.png" width="500px" height="125px">
 				</div>
@@ -70,7 +70,7 @@ There are billions of active users uploading their self-made videos to TikTok, Y
 Usually, all these videos are public and any visitor has the access to download and reuse them.
 Once you expose your voice in these videos, malicious attackers could clone your voice and impersonate your identity.
 Even as existing defense methods may be able to protect your voice in videos, it takes much more time than the length of the video itself.
-VoiceMask could protect your voice in your social network secure without any extra latency.</p>
+VSMask could protect your voice in your social network secure without any extra latency.</p>
 
 				<div class ="boxed">
 					<img src="assets/P3.png" width="500px" height="125px">
@@ -78,9 +78,9 @@ VoiceMask could protect your voice in your social network secure without any ext
 				<p> <b> Real-world Conversation:</b> Real-world human speech is threatened by voice synthesis attackers as well.
 While people are talking, an adversary can record the speech audio and launch the voice synthesis attack.
 Since real-world speech is a streaming audio signal, existing defenses cannot mask our voice efficiently enough to allow the protection of streaming audios.
-VoiceMask is able to protect your real-world conversation via real-time over-the-air perturbation injection.</p>
+VSMask is able to protect your real-world conversation via real-time over-the-air perturbation injection.</p>
 
-				<h2>VoiceMask System Design</h2>
+				<h2>VSMask System Design</h2>
 				<ul>
 						<li class="question">
 							<b> How to generate real-time perturbation?</b>
@@ -88,7 +88,7 @@ VoiceMask is able to protect your real-world conversation via real-time over-the
 								<img src="assets/P4.png" width="800px" height="440px">
 							</div>
 						<p class="answer">
-							As depicted in above figure, VoiceMask predictive model can forecast adversarial perturbation for upcoming streaming speech.
+							As depicted in above figure, VSMask predictive model can forecast adversarial perturbation for upcoming streaming speech.
 							For example, the model captures the input for time 0 to time t, and outputs the perturbation from t+Δt to t+ Δt+γ .
 							Then the model will slid forward to the next time window and so on.
 							However, the beginning of the speech is still exposed to threat only with the predictive model.
@@ -96,18 +96,18 @@ VoiceMask is able to protect your real-world conversation via real-time over-the
 							 <!-- <strong class="bold"> (e.g., command to smart home, Call someone by Siri, Interact with Google Assistants)</strong>, the interpreted commands is changed to the attacker's intention.
 							In our example (right), the transcribed sentences to changed from "close the window and curtains" to "open the door". In this case, our attack is very dangerous to able to alter/control the smart devices without users' perception. -->
 						</p>
-					<b>Key Features of VoiceMask:</b>
+					<b>Key Features of VSMask:</b>
 					<p class="answer">
 						<ul>
 								<li class="answer"> <b>Real-time:</b> The input of the predictive model is the previous speech signal and the output perturbation works for the following speech stream. VoiceMask can generate the perturbation in very short time delay (tens of milliseconds).</li>
-								<li class="answer">  <b>Imperceptible:</b> VoiceMask perturbation is operated on the human insensitive hearing frequency band, so that it it more difficult to realize the perturbation in the protected speech.</li>
-								<li class="answer">  <b>Privacy-preserving:</b> The VoiceMask model is light-weighted and locally trained. The users do not need to upload their voice to cloud and it keeps their privacy secure.</li>
+								<li class="answer">  <b>Imperceptible:</b> VSMask perturbation is operated on the human insensitive hearing frequency band, so that it it more difficult to realize the perturbation in the protected speech.</li>
+								<li class="answer">  <b>Privacy-preserving:</b> The VSMask model is light-weighted and locally trained. The users do not need to upload their voice to cloud and it keeps their privacy secure.</li>
 						</ul>
 
 					</p>
 				</ul>
 
-					<h2>VoiceMask Sample Audios</h2>
+					<h2>VSMask Sample Audios</h2>
 
 					<div style="margin-top=5em;">
 
@@ -122,7 +122,7 @@ VoiceMask is able to protect your real-world conversation via real-time over-the
 								<td>"Score: 0.88"</td>
 								<td>"Score: 0.72"</td>
 								<td>"Score: 0.79"</td>
-								<td>"Score: 0.65"</td>
+								<td>"Score: 0.15"</td>
 							</tr>
 						<tr>
 							<td><audio controls>
@@ -145,7 +145,7 @@ VoiceMask is able to protect your real-world conversation via real-time over-the
 								<td>"Score: 0.90"</td>
 								<td>"Score: 0.76"</td>
 								<td>"Score: 0.83"</td>
-								<td>"Score: 0.62"</td>
+								<td>"Score: 0.22"</td>
 						</tr>
 							<td><audio controls>
 									<source src="./assets/C1.wav" type="audio/wav">
@@ -173,7 +173,7 @@ VoiceMask is able to protect your real-world conversation via real-time over-the
 								<td>"Score: 0.85"</td>
 								<td>"Score: 0.77"</td>
 								<td>"Score: 0.81"</td>
-								<td>"Score: 0.64"</td>
+								<td>"Score: 0.14"</td>
 							</tr>
 						<tr>
 							<td><audio controls>
@@ -196,7 +196,7 @@ VoiceMask is able to protect your real-world conversation via real-time over-the
 								<td>"Score: 0.86"</td>
 								<td>"Score: 0.73"</td>
 								<td>"Score: 0.80"</td>
-								<td>"Score: 0.61"</td>
+								<td>"Score: 0.21"</td>
 						</tr>
 							<td><audio controls>
 									<source src="./assets/D1.wav" type="audio/wav">
